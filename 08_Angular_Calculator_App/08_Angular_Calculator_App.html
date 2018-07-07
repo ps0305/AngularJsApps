@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="calcApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../bootstrap/css/fontawesome-all.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/mdb.css">
+    <link rel="stylesheet" href="../bootstrap/css/style.css">
+
+    <title>AngularJS Calculator App</title>
+</head>
+
+<body>
+
+    <div class="container mt-5" ng-controller="calcAppCtrl as ctrl">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-header bg-#e1f5fe light-blue lighten-5">
+                        <h3 class="card-title">Calculator App</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-3">
+                                <input type="number" class="form-control" placeholder="Enter 1st Number" ng-model="ctrl.firstNumber">
+                            </div>
+                            <div class="col-md-1">
+                                <a class="btn btn-#e57373 red lighten-2">
+                                    {{ctrl.operator}}
+                                </a>
+                            </div>
+                            <div class="col-md-3 ml-3">
+                                <input type="number" class="form-control" placeholder="Enter 2nd Number" ng-model="ctrl.secondNumber">
+                            </div>
+                            <div class="col-md-1">
+                                <a class="btn btn-teal" ng-click="ctrl.calculate()">
+                                    <i class="fa fa-arrow-alt-circle-right"></i>
+                                </a>
+                            </div>
+                            <div class="col-md-3 ml-3 mt-1">
+                                <a class="btn btn-#8bc34a light-green btn-block">
+                                    {{ctrl.result}}
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 mt-2">
+                                <h4>Choose Operator : </h4>
+                            </div>
+                            <div class="col-md-9">
+                                <a class="btn btn-#6a1b9a purple darken-3" ng-click="ctrl.changeOperator('+')">+</a>
+                                <a class="btn btn-#6a1b9a purple darken-3" ng-click="ctrl.changeOperator('-')">-</a>
+                                <a class="btn btn-#6a1b9a purple darken-3" ng-click="ctrl.changeOperator('/')">/</a>
+                                <a class="btn btn-#6a1b9a purple darken-3" ng-click="ctrl.changeOperator('*')">*</a>
+                                <a class="btn btn-#ff1744 red accent-3" ng-click="ctrl.clearAll()">Clear</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card-footer text-center text-muted">
+                        <small>Developed & Maintained by
+                            <a target="_blank" href="https://github.com/ps0305">
+                                <i class="fa fa-user-circle"></i>Pankaj Singh</a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<!-- Body Ends -->
+<script src="../bootstrap/js/fontawesome-all.js"></script>
+<script src="../bootstrap/js/jquery-3.2.1.min.js"></script>
+<script src="../bootstrap/js/popper.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../bootstrap/js/mdb.min.js"></script>
+<script src="../angular/angular.js"></script>
+<script src="08_app.js"></script>
+
+</html>
